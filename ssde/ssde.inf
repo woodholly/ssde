@@ -4,8 +4,8 @@
 
 [Version]
 Signature="$WINDOWS NT$"
-Class=Samplex ; TODO: edit Class
-ClassGuid={78A1C341-4539-11d3-B88D-00C04FAD5171} ; TODO: edit ClassGuid
+Class=Blabla ; TODO: edit Class
+ClassGuid={5989fce8-9cd0-467d-8a6a-5419e31529d4} ; TODO: edit ClassGuid
 Provider=%ManufacturerName%
 CatalogFile=ssde.cat
 DriverVer= ; TODO: set DriverVer in stampinf property pages
