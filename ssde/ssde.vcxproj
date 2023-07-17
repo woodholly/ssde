@@ -127,12 +127,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
     <Inf2CatUseLocalTime>true</Inf2CatUseLocalTime>
-    <DriverSignFileDigestAlgorithm>SHA256</DriverSignFileDigestAlgorithm>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
     <Inf2CatUseLocalTime>true</Inf2CatUseLocalTime>
-    <DriverSignFileDigestAlgorithm>SHA256</DriverSignFileDigestAlgorithm>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
@@ -163,4 +161,10 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ItemDefinitionGroup>
+    <DriverSign>
+      <FileDigestAlgorithm Condition="'$(Configuration)|$(Platform)'=='Release|x64'">SHA256</FileDigestAlgorithm>
+      <FileDigestAlgorithm Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">SHA256</FileDigestAlgorithm>
+    </DriverSign>
+  </ItemDefinitionGroup>
 </Project>
