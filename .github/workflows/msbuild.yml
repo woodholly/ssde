@@ -43,3 +43,12 @@ jobs:
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
       run: msbuild /m /p:Configuration=Release /p:Platform=x64 ${{env.SOLUTION_FILE_PATH}}
 
+
+      - name: Upload All
+        if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v3
+        with:
+          name: All
+          path: |
+            D:\a\ssde\ssde\x64\Release\*
+          retention-days: 5
