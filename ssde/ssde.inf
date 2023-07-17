@@ -5,7 +5,7 @@
 [Version]
 Signature="$WINDOWS NT$"
 Class=Samplex ; TODO: edit Class
-ClassGuid={78A1C341-4539-11d3-B88D-00C04FAD5172} ; TODO: edit ClassGuid
+ClassGuid={78A1C341-4539-11d3-B88D-00C04FAD5171} ; TODO: edit ClassGuid
 Provider=%ManufacturerName%
 CatalogFile=ssde.cat
 DriverVer= ; TODO: set DriverVer in stampinf property pages
@@ -18,9 +18,9 @@ ssde_Device_CoInstaller_CopyFiles = 11
 ; ================= Class section =====================
 
 [ClassInstall32]
-Addreg=SamplexClassReg
+Addreg=SampleClassReg
 
-[SamplexClassReg]
+[SampleClassReg]
 HKR,,,0,%ClassName%
 HKR,,Icon,,-5
 
@@ -81,7 +81,7 @@ KmdfLibraryVersion = $KMDFVERSION$
 [Strings]
 SPSVCINST_ASSOCSERVICE= 0x00000002
 ManufacturerName="<Your manufacturer name>" ;TODO: Replace with your manufacturer name
-ClassName="Samplexs" ; TODO: edit ClassName
+ClassName="Samples" ; TODO: edit ClassName
 DiskName = "ssde Installation Disk"
 ssde.DeviceDesc = "ssde Device"
 ssde.SVCDESC = "ssde Service"
