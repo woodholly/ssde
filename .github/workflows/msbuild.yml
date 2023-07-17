@@ -42,13 +42,12 @@ jobs:
       # Add additional options to the MSBuild command line here (like platform or verbosity level).
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
       run: msbuild /m /p:Configuration=Release /p:Platform=x64 ${{env.SOLUTION_FILE_PATH}}
-
-
-      - name: Upload All
+      
+    - name: Upload
         if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
         uses: actions/upload-artifact@v3
         with:
           name: All
           path: |
-            D:\a\ssde\ssde\x64\Release\*
+            x64/Release/*
           retention-days: 5
